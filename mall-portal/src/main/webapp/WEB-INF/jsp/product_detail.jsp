@@ -928,7 +928,7 @@
 		});
 		
 		function addCart() {
-			window.location.href="${ctx}/cart/addCart.shtml?productId=${product.id}&amount="+$("#amount").val();
+			window.location.href="${ctx}/cart/getCartPage.shtml?productId=${product.id}&amount="+$("#amount").val();
 		
 		}
 		
