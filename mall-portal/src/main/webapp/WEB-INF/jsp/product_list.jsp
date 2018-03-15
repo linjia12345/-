@@ -9,7 +9,44 @@
 		<title>靓淘网</title>
 		<link rel="stylesheet" href="${ctx}/static/front/css/index_style.css" />
 	</head>
-	<script src="JS/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<style type="text/css">
+
+* {
+               margin: 0;
+               padding: 0;
+           }
+          
+           .Center_contents ul {
+               width: 726px;
+               /*去掉ul中的点*/
+               list-style-type: none;
+               margin: 20px auto;
+               border: 1px solid #ccc;
+           }
+          .Center_contents img {
+          	backgroundcolor:#ccc;
+               width: 200px;
+               height: 200px;
+           }
+          .Center_contents li {
+               border: 1px solid red;
+               padding: 10px;
+               margin: 10px;
+               float: left;
+               background-color: #ccc;
+           }
+          .Center_contents p {
+               text-align: center;
+           }
+           /*为了显示出ul的边框
+            清除对浮动的影响，在哪个元素上加clear就消除浮动对他的影响，
+            会出现在浮动元素的下方*/
+           .Center_contents .clearFloar {
+               clear: both;
+           }
+</style>
+	
+	
 
 	<body>
 		<!-----------------------1.top-------------------->
@@ -37,7 +74,7 @@
 		<!-----------------------2.logo-------------------->
 		<div class="logo_center">
 			<div class="left">
-				<img class="logo_img" src="img/LOGO.png" />
+				<img class="logo_img" src="${ctx}/static/front/img/LOGO.png" />
 			</div>
 			<div class="center">
 				<input class="btn1" type="text" value="洗面奶" />
@@ -106,8 +143,20 @@
 		</div>
 		
 		
+			<div class="Center_contents">
+	<c:forEach items="${list}" var="list">
+	 	<a href="${ctx}/product/getDetailPage.shtml?productId=${list.id}">
+	 	<ul>
+        	 <li >
+               <img src="/pic/${list.mainImage}" alt="" />
+               <p>Java</p>
+         	</li>
+          	<div class="clearFloar"></div>
+       </ul>
+       </a>
+     </c:forEach> 
+	</div>
 		
-	
 	
 	
 	
@@ -239,7 +288,7 @@
 						手机靓淘
 					</li>
 					<li>
-						<img src="img/98.png"/>
+						<img src="${ctx}/static/front/img/98.png"/>
 					</li>
 				</ul>
 			</div>

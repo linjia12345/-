@@ -48,7 +48,7 @@
 		<!---------------logo-------------------->
 		<div class="logo_center">
 			<div class="left">
-				<img src="${ctx}/static/front/${ctx}/static/front/img/LOGO.png" />
+				<img src="${ctx}/static/front/img/LOGO.png" />
 			</div>
 			<div class="center">
 				<input class="logo_search" type="text" />

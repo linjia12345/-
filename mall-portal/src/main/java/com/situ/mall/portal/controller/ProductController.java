@@ -19,7 +19,7 @@ public class ProductController {
 	@RequestMapping("/getProductListPage")
 	public String getProductListPage(Integer categoryId, Model model) {
 		List<Product> list = prductService.selectByCategoryId(categoryId);
-				model.addAttribute("list", list);
+		model.addAttribute("list", list);
 		return "product_list";
 	}
 	@RequestMapping("/getDetailPage")

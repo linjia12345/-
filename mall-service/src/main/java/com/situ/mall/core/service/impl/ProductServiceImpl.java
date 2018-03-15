@@ -72,7 +72,7 @@ public class ProductServiceImpl implements IProductService {
 
 	@Override
 	public List<Product> selectByCategoryId(Integer categoryId) {
-		return null;
+		return productMapper.selectByPrimaryKeys(categoryId);
 	}
 
 }

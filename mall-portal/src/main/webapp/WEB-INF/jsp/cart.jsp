@@ -88,7 +88,9 @@
 			<img src="${ctx}/static/front/img/157.png" style="margin-left: 142px; " />
 		</div>
 		</div>
-		<div class="car_1">
+	
+	<c:forEach items="${cartVo.cartItemVos}" var="cartItemVo">
+	<div class="car_1">
 			<div class="car_1_top">
 				<img src="${ctx}/static/front/img/158.png" />
 				<p class="car_1_top_p">
@@ -111,7 +113,7 @@
 					<img src="${ctx}/static/front/img/159.png" />
 				</div>
 				<div class="car_con_3">
-					<p class="p_title">华为&nbsp;畅想6S&nbsp;银色&nbsp;移动联通电信4G手机&nbsp;双卡双待</p>
+					<p class="p_title">${cartItemVo.product.name}</p>
 					<img src="${ctx}/static/front/img/160.png" />
 					<p class="p_seven">&nbsp;支持7天无理由退货</p>
 					<img src="${ctx}/static/front/img/161.png" />
@@ -125,12 +127,12 @@
 							</del>
 						</span>
 						<span style="color: #666666;">
-							¥ 1499.00
+						${cartItemVo.product.price}
 						</span>
 					</li>
 					<li class="num_select">
 						<input class="car_ul_btn1" type="button" value="-" />
-						<input class="car_ul_text" type="text" placeholder="1" />
+						<input class="car_ul_text" type="text" placeholder="1" value="${cartItemVo.amount}"/>
 						<input class="car_ul_btn2" type="button" value="+" />
 					</li>
 					<li class="money">
@@ -145,63 +147,11 @@
 			</div>
 			<div class="clearfix"></div>
 		</div>
-		<div class="car_1">
-			<div class="car_1_top">
-				<img src="${ctx}/static/front/img/158.png" />
-				<p class="car_1_top_p">
-					<span class="span1">
-						活动商品购满¥105.00 , 即可加价换购商品1件&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					</span>
-					<span class="span2">
-						&nbsp;查看换购品
-					</span>
-					<span class="span3">
-						&nbsp;&nbsp;去凑单&gt;
-					</span>
-				</p>
-			</div>
-			<div class="car_2_bottom">
-				<div class="car_con_1">
-					<input type="checkbox" />
-				</div>
-				<div class="car_con_2">
-					<img src="${ctx}/static/front/img/159.png" />
-				</div>
-				<div class="car_con_3">
-					<p class="p_title">华为&nbsp;畅想6S&nbsp;银色&nbsp;移动联通电信4G手机&nbsp;双卡双待</p>
-					<img src="${ctx}/static/front/img/160.png" />
-					<p class="p_seven">&nbsp;支持7天无理由退货</p>
-					<img src="${ctx}/static/front/img/161.png" />
-					<p class="p_select">&nbsp;选包装</p>
-				</div>
-				<ul class="car_ul">
-					<li class="price">
-						<span style="color: #CCCCCC; margin-bottom: 15px;line-height: 20px;">
-							<del>
-								¥ 1699.00<br />
-							</del>
-						</span>
-						<span style="color: #666666;">
-							¥ 1499.00
-						</span>
-					</li>
-					<li class="num_select">
-						<input class="car_ul_btn1" type="button" value="-" />
-						<input class="car_ul_text" type="text" placeholder="1" />
-						<input class="car_ul_btn2" type="button" value="+" />
-					</li>
-					<li class="money">
-						<span style="color: #F41443;">
-							¥ 1499.00
-						</span>
-					</li>
-					<li class="delete">
-						<img src="${ctx}/static/front/img/166.png" />
-					</li>
-				</ul>
-			</div>
-			<div class="clearfix"></div>
-		</div>
+	
+	
+	</c:forEach>
+	
+		
 		
 		
 		</div>

@@ -2,7 +2,7 @@ package com.situ.mall.portal.vo;
 
 import com.situ.mall.core.entity.Product;
 
-public class CartItem {
+public class CartItemVo {
 	private Product product;
 	private Integer amount;
 	private Integer isChecked;

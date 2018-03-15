@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.situ.mall.core.entity.Category;
+import com.situ.mall.core.entity.Product;
 import com.situ.mall.core.service.ICategoryService;
 @Controller
 public class IndexController {
@@ -25,3 +26,4 @@ public class IndexController {
 	}
 
 }
+	
